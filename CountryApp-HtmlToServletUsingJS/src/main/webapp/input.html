@@ -1,0 +1,28 @@
+
+
+<h1 style="color:red;text-align:center">Html to servlet communication using Java Script</h1>
+
+  <form action="capitalsurl"  method="POST" name="frm">
+      <table>
+          <tr>
+             <td> select Country :: </td>
+             <td>
+              <!-- <select name="country"  onchange="sendRequest()"> -->
+               <select name="country"  onchange="frm.submit()"> 
+                    <option value="">-----Select a  value-----</option>
+                    <option value="0"> India  </option>
+                    <option value="1"> Pakistan  </option>
+                    <option value="2"> USA  </option>
+                    <option value="3">China  </option>
+                    <option value="4"> Srilanka  </option>
+             </select>
+             </td>
+          </tr>
+      </table>
+    <!--   <script language="JavaScript">
+           function sendRequest(){
+        	    frm.submit();
+           }
+      </script> -->
+  
+  </form>
