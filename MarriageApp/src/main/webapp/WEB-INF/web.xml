@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+<welcome-file-list>
+    <welcome-file>input.html</welcome-file>
+   <welcome-file>homeurl</welcome-file>
+    <welcome-file>home.html</welcome-file>
+    <welcome-file>input.jsp</welcome-file>
+</welcome-file-list>
+
+
+  <servlet>
+     <servlet-name>marriage</servlet-name>
+     <servlet-class>com.nt.servlet.MarriageElgibilityCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>marriage</servlet-name>
+     <url-pattern>/marriageurl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>home</servlet-name>
+     <servlet-class>com.nt.servlet.HomePageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>home</servlet-name>
+     <url-pattern>/homeurl</url-pattern>
+  </servlet-mapping>
+  
+  
+	
+</web-app>
