@@ -1,0 +1,111 @@
+
+
+
+<h1 style="color:red;text-align:center"> Working all form comps in form page</h1>
+<form action="formurl" method="GET">
+   <table align="center" bgcolor="cyan">
+       <tr>
+          <td> Person name ::   </td>
+          <td>  <input type="s" name="pname"> </td>
+       </tr>
+       <tr>
+          <td> Person age ::   </td>
+          <td>  <input type="password" name="page"> </td>
+       </tr>
+       <tr>
+          <td> Person address ::   </td>
+          <td>  <textarea name="paddrs" rows="3"  cols="14">
+              
+                   </textarea> </td>
+       </tr>
+       <tr>
+          <td>   Gender ::   </td>
+          <td>  <input type="radio" name="gender"  value="M"> Male
+                        <input type="radio" name="gender"  value="F" checked>FeMale
+           </td>
+       </tr>
+       <tr>
+          <td>  Marital Status ::   </td>
+          <td>  <input type="checkbox" name="ms"  value="married"> married
+           </td>
+       </tr>
+         <tr>
+          <td>  Qualification ::   </td>
+          <td>  
+                   <select name="qlfy" >
+                         <option value=""  selected> .....select a value... </option>
+                         <option value="engineer">B.E/B.Tech </option>
+                         <option value="medico">MBBS/MD </option>
+                         <option value="arts">BA/B.Btech </option>
+                         <option value="science">B.sc /M.sc </option>
+                   </select>
+           </td>
+       </tr>
+         <tr>
+          <td> Courses ::   </td>
+          <td>  
+                   <select name="crs"  multiple >
+                         <option value="Java"  selected> Java package </option>
+                         <option value=".net">.Net package </option>
+                         <option value="php">PHP package</option>
+                         <option value="UI">UI Stack </option>
+                         <option value="spring" selected>Spring STack </option>
+                   </select>
+           </td>
+       </tr>
+       <!--  advanced comps --->
+        <tr>
+          <td> Person email::   </td>
+          <td>  <input type="email" name="email"> </td>
+       </tr>
+       <tr>
+          <td> Person DOB::   </td>
+          <td>  <input type="date" name="dob"> </td>
+       </tr>
+       <tr>
+          <td> Person Time of Birth::   </td>
+          <td>  <input type="time" name="tob"> </td>
+       </tr>
+       <tr>
+          <td> Week of birth   </td>
+          <td>  <input type="week" name="wb"> </td>
+       </tr>
+       <tr>
+          <td> FB Url   </td>
+          <td>  <input type="url" name="fbUrl"> </td>
+       </tr>
+       <tr>
+          <td> mobile number   </td>
+          <td>  <input type="tel" name="mobileNo"> </td>
+       </tr>
+       <tr>
+          <td> Favourite number   </td>
+          <td>  <input type="number" name="favNo"> </td>
+       </tr>
+       
+       <tr>
+          <td> Favourite color   </td>
+          <td>  <input type="color" name="favColor"> </td>
+       </tr>
+       
+       <tr>
+          <td> Salary   </td>
+          <td>  <input type="range" name="salary"  min="20000" max="100000"/>
+       </tr>
+       
+       <tr>
+          <td> Search someting   </td>
+          <td>  <input type="search" name="itemSearch"/>
+       </tr>
+       
+       <tr>
+          <td> <!-- <input type="sumbit"  value=" process Request"> -->
+                   <input type="image" src="images/submit.jpeg" width="200" height="100"   >
+             </td>
+          <td> <!--  <input type="reset" value="cancel"  /> -->
+                      <button type="reset"><img src="images/cancel.jpeg" width="200" height="100"></button>
+          </td>
+       </tr>
+   </table>
+
+</form>

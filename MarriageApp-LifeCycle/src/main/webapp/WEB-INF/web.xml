@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+<welcome-file-list>
+    <welcome-file>input.html</welcome-file>
+   <welcome-file>homeurl</welcome-file>
+    <welcome-file>home.html</welcome-file>
+    <welcome-file>input.jsp</welcome-file>
+</welcome-file-list>
+
+
+  <servlet>
+     <servlet-name>marriage</servlet-name>
+     <servlet-class>com.nt.servlet.MarriageElgibilityCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>marriage</servlet-name>
+     <url-pattern>/marriageurl</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+     <servlet-name>lc</servlet-name>
+     <servlet-class>com.nt.servlet.LcTestServlet</servlet-class>
+     <load-on-startup>10</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>lc</servlet-name>
+     <url-pattern>/lcurl</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+      <servlet-name>html</servlet-name>
+	  <servlet-class>com.nt.servlet.HtmlServlet</servlet-class>
+	   <load-on-startup>10</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>html</servlet-name>
+        <url-pattern>/htmlgames</url-pattern>
+   </servlet-mapping>
+  <servlet>
+      <servlet-name>plain</servlet-name>
+	  <servlet-class>com.nt.servlet.PlainServlet</servlet-class>
+	   <load-on-startup>10</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>plain</servlet-name>
+        <url-pattern>/plaingames</url-pattern>
+   </servlet-mapping>
+     <servlet>
+      <servlet-name>word</servlet-name>
+	  <servlet-class>com.nt.servlet.WordServlet</servlet-class>
+	   <load-on-startup>10</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>word</servlet-name>
+        <url-pattern>/wordgames</url-pattern>
+   </servlet-mapping>
+  <servlet>
+      <servlet-name>excel</servlet-name>
+	  <servlet-class>com.nt.servlet.ExcelServlet</servlet-class>
+	   <load-on-startup>10</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>excel</servlet-name>
+        <url-pattern>/excelgames</url-pattern>
+   </servlet-mapping>
+    <servlet>
+      <servlet-name>xml</servlet-name>
+	  <servlet-class>com.nt.servlet.XmlServlet</servlet-class>
+	   <load-on-startup>-10</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>xml</servlet-name>
+        <url-pattern>/xmlgames</url-pattern>
+   </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>home</servlet-name>
+     <servlet-class>com.nt.servlet.HomePageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>home</servlet-name>
+     <url-pattern>/homeurl</url-pattern>
+  </servlet-mapping>
+  
+  
+	
+</web-app>
