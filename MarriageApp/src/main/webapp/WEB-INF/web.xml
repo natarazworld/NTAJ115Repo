@@ -18,6 +18,21 @@
      <url-pattern>/marriageurl</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+     <servlet-name>lc</servlet-name>
+     <servlet-class>com.nt.servlet.LcTestServlet</servlet-class>
+     <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>lc</servlet-name>
+     <url-pattern>/lcurl</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
   <servlet>
      <servlet-name>home</servlet-name>
      <servlet-class>com.nt.servlet.HomePageServlet</servlet-class>

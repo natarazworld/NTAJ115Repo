@@ -25,11 +25,12 @@ public class MarriageElgibilityCheckServlet extends HttpServlet {
 		   String name=req.getParameter("pname");
 		   String tage=req.getParameter("page");
 		   String gen=req.getParameter("gender");
-		   int age=Integer.parseInt(tage);
-		   
-		  /* //  Server Form validation logics
+		   String  vstatus=req.getParameter("vflag");
+		  //  enable Server side Form validation logics only when client side form validations are not done
 		   int age=0;
+	   if(vstatus.equalsIgnoreCase("no")) {
 		   List<String> errorsList=new ArrayList();
+		   System.out.println("Server side form validations ");
 		    if(name==null || name.length()==0 || name.equals(""))  //required rule
 		    	errorsList.add("Person name is required");
 		    else if(name.length()<5)
@@ -60,8 +61,11 @@ public class MarriageElgibilityCheckServlet extends HttpServlet {
 		    	}//for
 		    	 pw.println("</ul>");
 		    	 return;   //return stmt with out value returns the control from curent method definitation to caller.
-		    }//if */
-		   
+		    }//if 
+	   }//if
+	   else {
+		   age=Integer.parseInt(tage);
+	   }
 		   
 		   //write  b.logic 
 		   if(gen.equalsIgnoreCase("M")) {

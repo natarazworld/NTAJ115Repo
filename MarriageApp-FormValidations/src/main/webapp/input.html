@@ -2,7 +2,7 @@
 
 
 <h1 style="color:red;text-align:center"> Html to Servlet communication using forms</h1>
-
+  <h1 style="color:red;text-align:center"><noscript>  Enable  Java Script</noscript> </h1>
 <script language="JavaScript" src="js/validation.js">
 
 </script>
@@ -11,18 +11,18 @@
        <table border="0"  bgcolor="cyan" align="center">
            <tr>
               <td>Person name:: </td>
-              <td><input type="text" name="pname"><span style="color:red">* </span> </td>
+              <td><input type="text" name="pname"><span style="color:red"  id="pnameErr">* </span> </td>
            </tr>
            <tr>
               <td>Person age:: </td>
-              <td><input type="text" name="page"><span style="color:red">* </span> </td>
+              <td><input type="text" name="page"><span style="color:red" id="pageErr">* </span> </td>
            </tr>
            <tr>
               <td>Person gender::  </td>
               <td>
                  <input type="radio" name="gender"  value="M"> Male &nbsp;&nbsp;&nbsp;
                  <input type="radio" name="gender"  value="F" checked> FeMale &nbsp;&nbsp;&nbsp; 
-                 <span style="color:red">* </span>
+                 <span style="color:red" id="genderErr">* </span>
                </td>
            </tr>
            
@@ -31,4 +31,5 @@
               <td> <input type="reset" value="cancel"> </td>
            </tr>
        </table>
+         <input type="hidden" name="vflag"  value="no">
  </form>
