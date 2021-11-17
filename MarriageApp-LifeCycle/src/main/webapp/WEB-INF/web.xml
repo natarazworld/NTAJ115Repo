@@ -22,6 +22,14 @@
   <servlet>
      <servlet-name>lc</servlet-name>
      <servlet-class>com.nt.servlet.LcTestServlet</servlet-class>
+     <init-param>
+        <param-name>driverClass</param-name>
+        <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+     </init-param>
+     <init-param>
+      <param-name>dbuser</param-name>
+      <param-value>system</param-value>
+     </init-param>
      <load-on-startup>10</load-on-startup>
   </servlet>
   <servlet-mapping>

@@ -5,9 +5,9 @@ import java.io.PrintWriter;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class LcTestServlet extends HttpServlet {
 	static {
@@ -19,20 +19,40 @@ public class LcTestServlet extends HttpServlet {
 	}
 	
 	@Override
-	public void init(ServletConfig cg) throws ServletException {
-          System.out.println("LcTestServlet: init(-) method");
+	public void init() throws ServletException {
+	  System.out.println("LcTestServlet.init()");
+	  ServletConfig cg=getServletConfig();
+	  System.out.println("init params===>"+cg.getInitParameter("driverClass")+"  "+cg.getInitParameter("dbuser"));
+	  
 	}
 	
+	/*@Override
+		public void init(ServletConfig cg) throws ServletException {
+	      System.out.println("LcTestServlet: init(-) method");
+	      String driver=cg.getInitParameter("driverClass");
+	      String user=cg.getInitParameter("dbuser");
+	      System.out.println(driver+"    "+user);
+		}*/
+	
 	@Override
-	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		System.out.println("LcTestServlet.service(req,res)");
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		System.out.println("LcTestServlet.service(req,res) doPost(-,-)");
+
+
 	  //get PrintWriter
 		PrintWriter pw=res.getWriter();
 		res.setContentType("text/html");
 		//write content to response object
-		pw.println("<h1 style='color:red;text-align:center'> Date and time ::"+new java.util.Date()+"</h1>");		
+		pw.println("<h1 style='color:red;text-align:center'> Date and time ::"+new java.util.Date()+"</h1>");
+		
+		ServletConfig cg=getServletConfig();
+		  System.out.println("init params===>"+cg.getInitParameter("driverClass")+"  "+cg.getInitParameter("dbuser"));
 		//close stream 
 		pw.close();
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("main(-) method");
 	}
 	
 	@Override
