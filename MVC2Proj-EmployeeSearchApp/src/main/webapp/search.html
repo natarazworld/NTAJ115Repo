@@ -1,0 +1,37 @@
+
+<script>
+  function  validate(frm){
+	    //form validation logic
+	     if(frm.desg.value==""){
+	    	 alert("U must select designation!!!!");
+	    	 frm.desg.focus();
+	    	 return false;
+	     } //if
+	    return true;
+  }//function
+
+</script>
+
+
+
+<h1 style="color:red;text-align:center">Search Employees  By Desg</h1>
+<form  action="controller"  method="POST"  onsubmit="return validate(this)"  target="f2">
+   <table  border="1" bgcolor="cyan" align="center">
+     <tr>
+        <td>Select Desg:: </td>
+        <td> <select name="desg">
+                        <option value="">---SELECT A VALUE---- </option>
+                        <option value="CLERK">CLERKS </option>
+                       <option value="MANAGER">MANAGERS </option>
+                       <option value="SALESMAN">SALESMEN </option>
+                       <option value="ANALYST">ANALYSTS </option>
+                       <option value="PRESIDENT">PRESIDENTS</option>
+                   </select>
+          </td>                   
+     </tr>
+     <tr>
+        <td><input type="submit"  name="s1" value="Html output"> </td>
+        <td><input type="submit" name="s1"  value="Excel output"> </td>
+     </tr>
+   </table>
+</form>
